@@ -1,0 +1,51 @@
+# vscode-extension
+vscode-extension/logs
+vscode-extension/*.log
+vscode-extension/npm-debug.log*
+vscode-extension/yarn-debug.log*
+vscode-extension/yarn-error.log*
+vscode-extension/pnpm-debug.log*
+vscode-extension/lerna-debug.log*
+
+vscode-extension/node_modules
+vscode-extension/dist
+vscode-extension/dist-ssr
+vscode-extension/*.local
+
+# Editor directories and files
+vscode-extension/.vscode/*
+vscode-extension/!.vscode/extensions.json
+vscode-extension/.idea
+vscode-extension/.DS_Store
+vscode-extension/*.suo
+vscode-extension/*.ntvs*
+vscode-extension/*.njsproj
+vscode-extension/*.sw?
+vscode-extension/logs
+
+# frontend
+web/client/*.log
+web/client/npm-debug.log*
+web/client/yarn-debug.log*
+web/client/yarn-error.log*
+web/client/pnpm-debug.log*
+web/client/lerna-debug.log*
+
+web/client/node_modules
+web/client/dist
+web/client/dist-ssr
+web/client/*.local
+
+# Editor directories and files
+web/client/.vscode/*
+web/client/!.vscode/extensions.json
+web/client/.idea
+web/client/.DS_Store
+web/client/*.suo
+web/client/*.ntvs*
+web/client/*.njsproj
+web/client/*.sw?
+
+# backed
+web/server/bin
+web/server/obj
