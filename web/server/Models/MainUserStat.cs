@@ -2,19 +2,21 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class MainUserStat
+public class MainUserStats
 {
-    [Key, Column(Order = 0)]
+    [Key, Column("USER_ID", Order = 0)]
     public Guid UserId { get; set; }
+    public required User User { get; set; }
 
-    [Key, Column(Order = 1)]
-    [StringLength(50)]
-    public required string ProjectId { get; set; }
+    [Key, Column("PROJECT_ID", Order = 1)]
+    [MaxLength(50)]
+    public string ProjectId { get; set; } = "";
+    public Project Project { get; set; } = new Project();
 
-    [Key, Column(Order = 2)]
-    [StringLength(50)]
-    public required string SolutionId { get; set; }
+    [Key, Column("SOLUTION_ID", Order = 2)]
+    [MaxLength(50)]
+    public string SolutionId { get; set; } = "";
 
-    [Column(TypeName = "numeric(18, 0)")]
+    [Column("NOOF_AUTO_GEN_LINES", TypeName = "numeric(18, 0)")]
     public decimal NoOfAutoGenLines { get; set; }
 }

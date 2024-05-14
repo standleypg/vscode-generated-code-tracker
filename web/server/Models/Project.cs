@@ -1,15 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class ProjectsList
+public class Project
 {
-    [Key]
-    [StringLength(50)]
-    [Column("PROJECT_ID")]
-    public required string ProjectId { get; set; }
+    [Key, Column("PROJECT_ID")]
+    [MaxLength(50)]
+    public string ProjectId { get; set; } = "";
 
-    [Required]
-    [StringLength(50)]
     [Column("PROJECT_NAME")]
+    [MaxLength(50)]
     public string ProjectName { get; set; } = "";
 }
