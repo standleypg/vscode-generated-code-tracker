@@ -1,1 +1,0 @@
-public record GetWeatherForecast(string city, int days);
