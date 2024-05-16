@@ -47,5 +47,5 @@ web/client/*.njsproj
 web/client/*.sw?
 
 # backed
-web/server/bin
-web/server/obj
+**/bin
+**/obj

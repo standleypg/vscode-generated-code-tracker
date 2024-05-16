@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/web/server/server.sln",
+                "${workspaceFolder}/web/server/Server.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/web/server/server.sln",
+                "${workspaceFolder}/web/server/Server.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/web/server/server.sln"
+                "${workspaceFolder}/web/server/Server.sln"
             ],
             "problemMatcher": "$msCompile"
         }
