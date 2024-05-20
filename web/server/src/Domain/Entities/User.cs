@@ -26,11 +26,11 @@ public class User
     [Column("USER_IMAGE")]
     public byte[]? UserImage { get; private set; }
 
-    public static User Create(Guid userId, string userName, string userEmail, byte[] passwordHash, byte[] passwordSalt, byte[]? userImage = null)
+    public static User Create(string userName, string userEmail, byte[] passwordHash, byte[] passwordSalt, byte[]? userImage = null)
     {
         return new User
         {
-            UserId = userId,
+            UserId = Guid.NewGuid(),
             UserName = userName,
             UserEmail = userEmail,
             PasswordHash = passwordHash,
