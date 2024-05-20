@@ -10,7 +10,7 @@ import {
 const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {
-    token: { colorBgContainer, borderRadiusLG },
+    token: { colorBgContainer },
   } = theme.useToken();
 
   return (
@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <SiderMenu collapsed={collapsed} toggleCollapse={() => setCollapsed(!collapsed)} />
       <Layout>
       <AppHeader collapsed={collapsed} toggleCollapse={() => setCollapsed(!collapsed)} colorBgContainer={colorBgContainer} />
-        <DashboardContent colorBgContainer={colorBgContainer} borderRadiusLG={`${borderRadiusLG}`} />
+        <DashboardContent colorBgContainer={colorBgContainer} />
       </Layout>
     </Layout>
   );

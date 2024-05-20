@@ -7,7 +7,6 @@ const { Content } = Layout;
 
 interface DashboardContentProps {
   colorBgContainer: string;
-  borderRadiusLG: string;
 }
 
 interface DataType {
@@ -73,7 +72,7 @@ const data: DataType[] = [
   },
 ];
 
-const DashboardContent: React.FC<DashboardContentProps> = ({ colorBgContainer, borderRadiusLG }) => {
+const DashboardContent: React.FC<DashboardContentProps> = ({ colorBgContainer }) => {
   const currentDateTime = getCurrentDateTime();
   
   return (
@@ -81,9 +80,9 @@ const DashboardContent: React.FC<DashboardContentProps> = ({ colorBgContainer, b
       style={{
         margin: "25px 20px",
         padding: "0px 15px",
-        minHeight: 400,
+        minHeight: "100vh",
         background: colorBgContainer,
-        borderRadius: borderRadiusLG,
+        borderRadius: 8,
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', marginTop: 10 }}>
