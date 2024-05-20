@@ -22,7 +22,7 @@ public static class DependencyResolver
     {
         services.AddSwaggerGen(config =>
         {
-            config.SwaggerDoc("v1", new() { Title = "Adra_API", Version = "v1" });
+            config.SwaggerDoc("v1", new() { Title = "VSCODE_API", Version = "v1" });
             config.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
             {
                 Type = SecuritySchemeType.ApiKey,
