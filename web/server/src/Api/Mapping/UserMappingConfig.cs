@@ -12,7 +12,7 @@ public class UserMappingConfig : IRegister
         .Map(dest => dest.Email, src => src);
 
         config.NewConfig<GetUserResult, GetUserByEmailResponse>()
-        .Map(dest => dest.Id, src => src.User.UserId)
+        .Map(dest => dest.Id, src => src.User.Id)
         .Map(dest => dest.Email, src => src.User.UserEmail)
         .Map(dest => dest.Username, src => src.User.UserName);
     }

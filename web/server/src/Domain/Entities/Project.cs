@@ -1,24 +1,27 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Emit;
+using System.Text.Json.Serialization;
 
 namespace Domain.Entities;
 
-public class Project
+public class Project : EntityBase
 {
-    [Key, Column("PROJECT_ID")]
-    [MaxLength(50)]
-    public string ProjectId { get; private set; } = string.Empty;
-
-    [Column("PROJECT_NAME")]
-    [MaxLength(50)]
     public string ProjectName { get; private set; } = string.Empty;
+    public string? Description { get; private set; }
+    [JsonIgnore]
+    public IEnumerable<UserProject> UserProjects { get; private set; } = [];
+    [JsonIgnore]
+    public IEnumerable<Solution> Solutions { get; private set; } = [];
+    [JsonIgnore]
+    public IEnumerable<Stat> Stats { get; private set; } = [];
 
-    public static Project Create(string projectId, string projectName)
+    public static Project Create(string projectName, string? description = null)
     {
         return new Project
         {
-            ProjectId = projectId,
-            ProjectName = projectName
+            ProjectName = projectName,
+            Description = description
         };
     }
 }
